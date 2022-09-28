@@ -1,4 +1,4 @@
-# MechaCar_Statistical_Analysis
+# MechaCar Statistical Analysis
 
 ## Linear Regression to Predict MPG
 This linear regression model is designed to determine if the mpg of the MechaCar prototype can be predicted by a number of other characteristic variables (vehicle length, ground clearance, vehicle weight, spoiler angle and AWD). After performaing a linear regression function on our input data (using the lm() function in R) we then summarize the data (using the summarize() function in R) to return the statistical values needed for measuring the correlation between each of the variables tested against mpg.
@@ -15,34 +15,40 @@ This linear regression model is designed to determine if the mpg of the MechaCar
 ![Screen Shot 2022-09-25 at 4 32 31 PM](https://user-images.githubusercontent.com/107326987/192677894-2ddc612e-3d0b-4aa7-bbfe-7ef8a0245691.png)
 
 ## Summary Statistics on Suspension Coils
-The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. We will perform Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. We will perform summary analysis to determine the mean, median, standard deviation and variance of the car lots in aggregate and indivdually to determine if they conform to performance standards and design specifications. 
 
-When looking at the summary table for all lots it would appear that the suspension coil standard for variance is met. When we break out the statistical data per Lot# we can see that the variance for Lot1 and Lot2 are well below the tolerance level for variance but that the variance for Lot3 is way above the standard tolerance for variance. Lot3 cars PSI would not meet standard as there is too much volativliy tin the data set for the PSI on the coils of these cars.
 ![Screen Shot 2022-09-25 at 4 31 03 PM](https://user-images.githubusercontent.com/107326987/192671897-32a28f8d-0de7-45af-9bcc-69e11553595e.png)
+
+When we perform our analysis on the lot dataset as an aggregate it would appear that the suspension coil standard for variance is met. The measured variance of 62.69 is less than the allowable max of 100. 
+
 ![Screen Shot 2022-09-25 at 4 31 19 PM](https://user-images.githubusercontent.com/107326987/192671909-2fed3b58-0de2-49dd-8a75-4976122548ad.png)
 
+When we break out the statistical data per Lot# we can see that the variance for Lot1 and Lot2 are well below the tolerance level for variance but that the variance for Lot3 is way above the standard tolerance for variance. The cars belonging to Lot3 would not meet the standard as there is too much volatility in the data set for Coil PSI of these cars.
+
+
 ## T-Tests on Suspension Coils 
-then briefly summarize your interpretation and findings for the t-test results. Include screenshots of the t-test to support your summary.
 ![Screen Shot 2022-09-25 at 4 30 32 PM](https://user-images.githubusercontent.com/107326987/192671956-e2f424f0-ef14-48df-9caf-5ae1399956ce.png)
 ![Screen Shot 2022-09-25 at 4 30 18 PM](https://user-images.githubusercontent.com/107326987/192671964-5799df14-66f4-4dc6-8747-24b367031f0c.png)
 ![Screen Shot 2022-09-25 at 4 30 06 PM](https://user-images.githubusercontent.com/107326987/192671973-7a7cba0f-0fe6-4ec2-9512-19fa037ab35b.png)
 ![Screen Shot 2022-09-25 at 4 29 56 PM](https://user-images.githubusercontent.com/107326987/192671985-e46cbdb7-c802-4416-a0f2-3985bf8884fb.png)
-We are measuring the potential statistical difference of our lots (summarized and individualized) against the sample population mean PSI of 1500
-The lots summarized in aggregate of a p value of 0.06 which shows that
 
+Our hypotheses in order to perform the t-test are as follow:
 •	H0 : There is no statistical difference between the observed sample mean and its presumed population mean.
 •	Ha : There is a statistical difference between the observed sample mean and its presumed population mean.
-P value is above significance level so we can’t reject the null. Which means ther eis no statistical difference between sample and mean of population
-Same for lot 1 and 2 individually
-Lot 3, below our significance leve, which means we can reject the null and we are left with our hypothesis that there is a statistical difference in the observed mean.
-![image](https://user-images.githubusercontent.com/107326987/192679666-7c6000b4-a479-4256-9c13-e855e1342d65.png)
+
+We are measuring the potential statistical difference of our lots (summarized and individualized) against the sample population mean PSI of 1500.
+The lots in aggregate have a summarized p value of 0.06 which means that we cannot reject our null hypotheses and there is no statistical difference of our sample lots from the presumed popultion mean of 1500.
+
+The same is true when Lot1 and Lot2 are measured individually. With p values of 1 and 0.6 respectively, these values are higher than the significance level, we cannot reject our null hypothesis and we have determined that the there is no statistical difference in the mean of these samples compared to our presumed population mean of 1500. 
+Lot 3 has a p value of below our significance level of 0.5, which means we can reject the null and we are left with our hypothesis that there is a statistical difference in the observed mean.
 
 ## Study Design: MechaCar vs Competition
+The client MechaCar is interested in measuring their cars perfomance against comparable cars on the market in order to have real feedback on how to take their prototype to market. In order to determine relative performance we highlighted 2 characteristics to measure that have high significance in consumer importance. Measured against cars on the market currently with the same passenger capacity
+ - MSRP and MPG
+ In order to perform analysis we would need to collect the MSRP and MPG across all makes of cars currently on the market for models that have the same passenger capacity as the MechaCar
+ Our hypothesis for testing is
+
 The null hypothesis is also known as H0 and is generally the hypothesis that can be explained by random chance.
 The alternate hypothesis is also known as Ha and is generally the hypothesis that is influenced by non-random events.
 
-In your description, address the following questions:
-What metric or metrics are you going to test?
-What is the null hypothesis or alternative hypothesis?
-What statistical test would you use to test the hypothesis? And why?
-What data is needed to run the statistical test?
+We would use a multiple linear regression or one-way ANOVA
