@@ -1,8 +1,9 @@
 # MechaCar Statistical Performance Analysis
 
 ## Linear Regression to Predict MPG
-This linear regression model is designed to determine if the mpg of the MechaCar prototype can be predicted by a number of other characteristic variables (vehicle length, ground clearance, vehicle weight, spoiler angle and AWD). After performaing a linear regression function on our input data (using the lm() function in R) we then summarize the data (using the summarize() function in R) to return the statistical values needed for measuring the correlation between each of the variables tested against mpg.
+### This linear regression model is designed to determine if the mpg of the MechaCar prototype can be predicted by a number of other characteristic variables (vehicle length, ground clearance, vehicle weight, spoiler angle and AWD). After performaing a linear regression function on our input data (using the lm() function in R) we then summarize the data (using the summarize() function in R) to return the statistical values needed for measuring the correlation between each of the variables tested against mpg.
 
+## Analysis Results : Multiple Car Characteristics as Determinent for MPG Performance
 ![Screen Shot 2022-09-25 at 4 33 00 PM](https://user-images.githubusercontent.com/107326987/192671834-c20c3494-c234-448e-8d7d-81720cd7ba69.png)
 
 - Random/Non-random status and degree of variance of each MechaCar variable compared against mpg
@@ -10,7 +11,7 @@ This linear regression model is designed to determine if the mpg of the MechaCar
 - Is the slope of the linear model considered to be zero? Why or why not?
   - summarized p value is 5.35e-11, much lower than our assumed significance level of 0.05. Therefore, we can state that there is sufficient evidence to reject our null hypothesis, which means that the slope of our linear model is not zero
 - Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
-  - The R value is 0.7149 - roughly 71% of the variability of our dependent variable (mpg) is explained using this linear model. The statistical analysis shows a moderate to strong corelation between the defined variables/characteristics and the measure of mpg. 
+  - The R value is 0.7149 - roughly 71% of the variability of our dependent variable (mpg) is explained using this linear model. The statistical analysis shows a moderate to strong corelation between the defined variables/characteristics and the mpg performance. 
 
 ![Screen Shot 2022-09-25 at 4 32 31 PM](https://user-images.githubusercontent.com/107326987/192677894-2ddc612e-3d0b-4aa7-bbfe-7ef8a0245691.png)
 
@@ -43,12 +44,17 @@ The same is true when Lot1 and Lot2 are measured individually. With p values of 
 Lot 3 has a p value of below our significance level of 0.5, which means we can reject the null and we are left with our hypothesis that there is a statistical difference in the observed mean.
 
 ## Study Design: MechaCar vs Competition
-The client MechaCar is interested in measuring their cars perfomance against comparable cars on the market in order to have real feedback on how to take their prototype to market. In order to determine relative performance we highlighted 2 characteristics to measure that have high significance in consumer importance. Measured against cars on the market currently with the same passenger capacity
+The client MechaCar is interested in measuring their cars perfomance against comparable cars on the market in order to have real feedback on how to take their prototype to market. In order to determine relative performance we highlighted 2 characteristics to measure that have high significance in consumer importance. We will measure these variables against cars currently on the market with the same passenger capacity
  - MSRP and MPG
  In order to perform analysis we would need to collect the MSRP and MPG across all makes of cars currently on the market for models that have the same passenger capacity as the MechaCar
- Our hypothesis for testing is
 
 The null hypothesis is also known as H0 and is generally the hypothesis that can be explained by random chance.
 The alternate hypothesis is also known as Ha and is generally the hypothesis that is influenced by non-random events.
 
-We would use a multiple linear regression or one-way ANOVA
+After determining which factors are key for the MechaCar's genre, our hypothese for testing are as follows:
+
+- Null Hypothesis (Ho): MechaCar is NOT market-competitive based on MSRP and MPG performance for its car class.
+- Alternative Hypothesis (Ha): MechaCar is is market-competitive based on MSRP and MPG performance for its car class.
+
+Statistical Tests
+To perform analysis on our hypotheses, we would use multiple linear regression to determine the correlation and predictability of market-competitiveness based on our independedn variables (MSRP and MPG).
