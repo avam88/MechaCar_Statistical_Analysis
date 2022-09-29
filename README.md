@@ -1,4 +1,4 @@
-# MechaCar Statistical Analysis
+# MechaCar Statistical Performance Analysis
 
 ## Linear Regression to Predict MPG
 This linear regression model is designed to determine if the mpg of the MechaCar prototype can be predicted by a number of other characteristic variables (vehicle length, ground clearance, vehicle weight, spoiler angle and AWD). After performaing a linear regression function on our input data (using the lm() function in R) we then summarize the data (using the summarize() function in R) to return the statistical values needed for measuring the correlation between each of the variables tested against mpg.
